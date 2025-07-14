@@ -102,9 +102,9 @@ After installation, you can ask Claude to:
 
 ## 🔗 Links & Resources
 
-- **Source Code**: [eva-monorepo/services/mcp-desktop-gateway](https://github.com/bobmatnyc/eva-monorepo/tree/main/services/mcp-desktop-gateway)
+- **Source Code**: [mcp-shell](https://github.com/bobmatnyc/mcp-shell)
 - **Installation Guide**: `MCP_SHELL_INSTALL_GUIDE.md`
-- **Issues & Support**: [GitHub Issues](https://github.com/bobmatnyc/eva-monorepo/issues)
+- **Issues & Support**: [GitHub Issues](https://github.com/bobmatnyc/mcp-shell/issues)
 - **MCP Documentation**: [Model Context Protocol](https://mcp.so/)
 - **DXT Specification**: [Desktop Extensions](https://github.com/anthropics/dxt)
 

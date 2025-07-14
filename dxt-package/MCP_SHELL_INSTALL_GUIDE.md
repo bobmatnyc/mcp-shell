@@ -50,15 +50,15 @@ Once installed, you can ask Claude to:
 
 ## Source Code
 
-This extension is built from the open-source MCP Desktop Gateway:
-- Repository: https://github.com/bobmatnyc/mcp-desktop-gateway
+This extension is built from the open-source MCP Shell project:
+- Repository: https://github.com/bobmatnyc/mcp-shell
 - License: MIT
 
 ## Support
 
 For issues or questions:
-- GitHub Issues: https://github.com/bobmatnyc/mcp-desktop-gateway/issues
-- Documentation: https://github.com/bobmatnyc/mcp-desktop-gateway#readme
+- GitHub Issues: https://github.com/bobmatnyc/mcp-shell/issues
+- Documentation: https://github.com/bobmatnyc/mcp-shell#readme
 
 ## Security Note
 
