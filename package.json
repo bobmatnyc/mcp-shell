@@ -1,0 +1,63 @@
+{
+  "name": "@bobmatnyc/mcp-desktop-gateway",
+  "version": "1.3.1",
+  "description": "Universal MCP Gateway for Claude Desktop - Python-based bridge with built-in connectors and automatic prompt training",
+  "author": "Robert (Masa) Matsuoka <bobmatnyc@users.noreply.github.com>",
+  "main": "lib/cli.js",
+  "bin": {
+    "mcp-desktop-gateway": "lib/cli.js"
+  },
+  "scripts": {
+    "postinstall": "node lib/cli.js setup",
+    "start": "node lib/cli.js",
+    "setup": "node lib/cli.js setup",
+    "config": "node lib/cli.js config",
+    "configure": "node lib/cli.js configure",
+    "test": "python scripts/run_tests.py",
+    "test:local": "make test-mcp-local",
+    "prepack": "echo 'Preparing package for publish...'",
+    "prepublishOnly": "echo 'Pre-publish checks completed'"
+  },
+  "keywords": [
+    "mcp",
+    "claude",
+    "ai",
+    "bridge",
+    "gateway",
+    "anthropic",
+    "connector",
+    "prompt-training",
+    "langchain",
+    "machine-learning",
+    "automation"
+  ],
+  "license": "MIT",
+  "files": [
+    "lib/",
+    "src/",
+    "config/",
+    "requirements.txt",
+    "compile_bytecode.py",
+    "run_mcp_gateway.py",
+    "VERSION",
+    "README.md",
+    "README.npm.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@vercel/kv": "^3.0.0",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bobmatnyc/mcp-desktop-gateway.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bobmatnyc/mcp-desktop-gateway/issues"
+  },
+  "homepage": "https://github.com/bobmatnyc/mcp-desktop-gateway#readme"
+}
