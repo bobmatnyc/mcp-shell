@@ -1,7 +1,7 @@
 {
   "dxt_version": "0.1.0",
   "name": "mcp-shell",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Universal shell connector for MCP - Execute shell commands, AppleScript, Chrome automation, and more from Claude Desktop",
   "author": {
     "name": "Robert (Masa) Matsuoka",
@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bobmatnyc/mcp-desktop-gateway"
+    "url": "https://github.com/bobmatnyc/mcp-shell"
   },
   "keywords": [
     "shell",
@@ -58,7 +58,8 @@
       "command": "python3",
       "args": ["server/mcp_shell_server_fixed.py"],
       "env": {
-        "MCP_SHELL_DEFAULT_DIR": "${user_config.default_shell_directory}"
+        "MCP_SHELL_DEFAULT_DIR": "${user_config.default_shell_directory}",
+        "PYTHONPATH": "server/lib"
       }
     }
   },
