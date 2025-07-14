@@ -1,8 +1,8 @@
 {
   "dxt_version": "0.1.0",
   "name": "mcp-shell",
-  "version": "1.4.2",
-  "description": "Universal shell connector for MCP - Execute shell commands, AppleScript, Chrome automation, and more from Claude Desktop",
+  "version": "1.5.0",
+  "description": "Secure shell connector for MCP - Execute shell commands with directory restrictions, path traversal prevention, and safe navigation",
   "author": {
     "name": "Robert (Masa) Matsuoka",
     "email": "bobmatnyc@users.noreply.github.com"
@@ -24,19 +24,31 @@
   "tools": [
     {
       "name": "execute_shell",
-      "description": "Execute shell commands safely with timeout protection in your configured default directory"
+      "description": "Execute shell commands safely with timeout protection in current directory"
     },
     {
       "name": "read_file", 
-      "description": "Read and return the contents of a text file"
+      "description": "Read and return the contents of a text file (restricted to root directory)"
     },
     {
       "name": "write_file",
-      "description": "Write content to a file, creating directories if needed"
+      "description": "Write content to a file, creating directories if needed (restricted to root directory)"
     },
     {
       "name": "list_directory",
-      "description": "List contents of a directory with file information (defaults to your configured directory)"
+      "description": "List contents of a directory with file information (restricted to root directory)"
+    },
+    {
+      "name": "change_directory",
+      "description": "Change current working directory (restricted to subdirectories only, no parent traversal)"
+    },
+    {
+      "name": "get_current_directory",
+      "description": "Get the current working directory path relative to root"
+    },
+    {
+      "name": "list_subdirectories",
+      "description": "List only subdirectories for safe navigation (no files or hidden directories)"
     },
     {
       "name": "run_applescript",
