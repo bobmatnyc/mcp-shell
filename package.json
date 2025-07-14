@@ -1,6 +1,6 @@
 {
   "name": "@bobmatnyc/mcp-desktop-gateway",
-  "version": "1.3.1",
+  "version": "1.4.1",
   "description": "Universal MCP Gateway for Claude Desktop - Python-based bridge with built-in connectors and automatic prompt training",
   "author": "Robert (Masa) Matsuoka <bobmatnyc@users.noreply.github.com>",
   "main": "lib/cli.js",

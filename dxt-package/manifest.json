@@ -1,7 +1,7 @@
 {
   "dxt_version": "0.1.0",
   "name": "mcp-shell",
-  "version": "1.3.4",
+  "version": "1.4.1",
   "description": "Universal shell connector for MCP - Execute shell commands, AppleScript, Chrome automation, and more from Claude Desktop",
   "author": {
     "name": "Robert (Masa) Matsuoka",
@@ -24,7 +24,7 @@
   "tools": [
     {
       "name": "execute_shell",
-      "description": "Execute shell commands safely with timeout protection"
+      "description": "Execute shell commands safely with timeout protection in your configured default directory"
     },
     {
       "name": "read_file", 
@@ -36,19 +36,30 @@
     },
     {
       "name": "list_directory",
-      "description": "List contents of a directory with file information"
+      "description": "List contents of a directory with file information (defaults to your configured directory)"
     },
     {
       "name": "run_applescript",
       "description": "Execute AppleScript commands for macOS automation"
     }
   ],
+  "user_config": {
+    "default_shell_directory": {
+      "title": "Default Shell Directory",
+      "description": "Starting directory for shell command execution",
+      "type": "string",
+      "default": "~"
+    }
+  },
   "server": {
     "type": "python",
-    "entry_point": "mcp_shell_server_fixed.py",
+    "entry_point": "server/mcp_shell_server_fixed.py",
     "mcp_config": {
       "command": "python3",
-      "args": ["server/mcp_shell_server_fixed.py"]
+      "args": ["server/mcp_shell_server_fixed.py"],
+      "env": {
+        "MCP_SHELL_DEFAULT_DIR": "${user_config.default_shell_directory}"
+      }
     }
   },
   "icon": "icons/icon-48.png"

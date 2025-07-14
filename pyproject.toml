@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mcp-desktop-gateway"
-version = "1.1.0"
+version = "1.4.1"
 description = "A flexible gateway for Model Context Protocol (MCP) servers"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -236,7 +236,7 @@ skips = ["B101"]  # assert_used - we use asserts in the code
 # Commitizen configuration for conventional commits
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "1.1.0"
+version = "1.4.1"
 tag_format = "v$version"
 version_files = [
     "pyproject.toml:version",

@@ -45,6 +45,15 @@ class MCPShellServer:
     def __init__(self):
         logger.info("Initializing MCP Shell Server...")
         self.server = Server("mcp-shell")
+        
+        # Read configuration from environment
+        self.default_directory = os.environ.get("MCP_SHELL_DEFAULT_DIR", os.path.expanduser("~"))
+        # Expand tilde if present
+        if self.default_directory.startswith("~"):
+            self.default_directory = os.path.expanduser(self.default_directory)
+        
+        logger.info(f"Default shell directory set to: {self.default_directory}")
+        
         self.setup_handlers()
         logger.info("MCP Shell Server initialized")
     
@@ -173,7 +182,10 @@ class MCPShellServer:
     async def _execute_shell(self, args: Dict[str, Any]) -> List[TextContent]:
         """Execute shell command safely"""
         command = args["command"]
-        working_dir = args.get("working_directory", ".")
+        # Use configured default directory if no working_directory specified
+        working_dir = args.get("working_directory")
+        if not working_dir:
+            working_dir = self.default_directory
         
         logger.info(f"Executing command: {command} in {working_dir}")
         
@@ -255,7 +267,10 @@ class MCPShellServer:
     
     async def _list_directory(self, args: Dict[str, Any]) -> List[TextContent]:
         """List directory contents"""
-        directory_path = args.get("directory_path", ".")
+        # Use configured default directory if no directory_path specified
+        directory_path = args.get("directory_path")
+        if not directory_path:
+            directory_path = self.default_directory
         
         try:
             path = Path(directory_path)
