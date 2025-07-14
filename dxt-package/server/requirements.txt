@@ -1,8 +1,2 @@
-# MCP Gateway Requirements - Essential packages only
-# Requires Python 3.11+
-
+# Minimal requirements for MCP Shell DXT package
 mcp>=1.9.3
-pydantic>=2.11.5
-PyYAML>=6.0.2
-typing-extensions>=4.8.0
-websockets>=12.0

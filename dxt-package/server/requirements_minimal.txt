@@ -1,0 +1,2 @@
+# Minimal requirements for MCP Shell DXT package
+mcp>=1.9.3

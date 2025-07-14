@@ -23,10 +23,10 @@
   ],
   "server": {
     "type": "python",
-    "entry_point": "run_mcp_gateway.py",
+    "entry_point": "mcp_shell_server.py",
     "mcp_config": {
       "command": "python",
-      "args": ["server/run_mcp_gateway.py"]
+      "args": ["server/mcp_shell_server.py"]
     }
   },
   "icon": "icons/icon-48.png"

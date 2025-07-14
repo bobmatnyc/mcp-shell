@@ -1,1 +1,0 @@
-# Contacts AppleScript Connector
